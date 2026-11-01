@@ -1,0 +1,3613 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Helpdesk & Ticket Triage for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-helpdesk\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T03:58:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-helpdesk\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-helpdesk.php
+msgid "DEV3 AI Helpdesk & Ticket Triage for WordPress"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-helpdesk.php
+msgid "https://dev3.tech/item/dev3-ai-helpdesk"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-helpdesk.php
+msgid "Support tickets from forms and email, a searchable help centre, and DEV3 AI triage, KB-grounded reply drafts and thread summaries."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-helpdesk.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-helpdesk.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:54
+msgid "Helpdesk"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:55
+#: includes/Kb/Kb.php:73
+msgid "Help categories"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:99
+#: build/admin.js:13
+msgid "Settings"
+msgstr ""
+
+#: includes/Ai/Article_Builder.php:64
+#: includes/Ai/Reply_Drafter.php:39
+#: includes/Ai/Summarizer.php:31
+#: includes/Ai/Triage.php:34
+#: includes/Helpdesk/Service.php:173
+#: includes/Helpdesk/Service.php:270
+#: includes/Helpdesk/Service.php:337
+#: includes/Helpdesk/Service.php:433
+#: includes/Rest/Agent_Controller.php:95
+#: includes/Rest/Manager_Controller.php:381
+msgid "Ticket not found."
+msgstr ""
+
+#: includes/Ai/Article_Builder.php:101
+msgid "DEV3 AI returned an empty article. Try again."
+msgstr ""
+
+#: includes/Ai/Article_Builder.php:146
+msgid "The article needs a title and content."
+msgstr ""
+
+#. translators: %s: article title.
+#: includes/Ai/Article_Builder.php:174
+#, php-format
+msgid "Help article draft created: %s"
+msgstr ""
+
+#: includes/Ai/Article_Builder.php:193
+msgid "Solve a few more tickets first: the report needs at least 3 resolved tickets."
+msgstr ""
+
+#: includes/Ai/Reply_Drafter.php:102
+msgid "DEV3 AI returned an empty draft. Try again."
+msgstr ""
+
+#. translators: %s: confidence percent.
+#: includes/Ai/Reply_Drafter.php:151
+#, php-format
+msgid "Reply sent automatically by DEV3 AI (confidence %s%%)."
+msgstr ""
+
+#: includes/Ai/Reply_Drafter.php:165
+msgid "Write something first."
+msgstr ""
+
+#: includes/Ai/Triage.php:114
+msgid "Run DEV3 AI triage first."
+msgstr ""
+
+#: includes/Ai/Triage.php:134
+msgid "DEV3 AI triage applied automatically."
+msgstr ""
+
+#: includes/Ai/Triage.php:134
+msgid "DEV3 AI triage applied."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+#: build/admin.js:7
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+#: includes/Rest/Agent_Controller.php:81
+#: includes/Rest/Manager_Controller.php:87
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+#: includes/Rest/Public_Controller.php:87
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Data/Canned.php:77
+#: build/admin.js:13
+msgid "Give the reply a title and some text."
+msgstr ""
+
+#: includes/Data/Personal_Data.php:50
+#: includes/Plugin.php:143
+#: includes/Plugin.php:144
+msgid "Support tickets"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:54
+#: includes/Frontend/Strings.php:86
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Ticket"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:58
+#: includes/Frontend/Strings.php:30
+#: build/admin.js:9
+msgid "Subject"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:62
+#: build/admin.js:13
+msgid "Name"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:66
+#: includes/Data/Tickets.php:83
+msgid "Email"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:70
+#: build/admin.js:7
+msgid "Created"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:74
+msgid "Messages"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:78
+msgid "Rating"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:112
+#: includes/Data/Personal_Data.php:124
+msgid "Anonymous"
+msgstr ""
+
+#: includes/Data/Personal_Data.php:115
+msgid "[removed at the customer’s request]"
+msgstr ""
+
+#: includes/Data/Tickets.php:42
+msgid "New"
+msgstr ""
+
+#: includes/Data/Tickets.php:43
+#: build/admin.js:7
+msgid "Open"
+msgstr ""
+
+#: includes/Data/Tickets.php:44
+msgid "Waiting on customer"
+msgstr ""
+
+#: includes/Data/Tickets.php:45
+msgid "On hold"
+msgstr ""
+
+#: includes/Data/Tickets.php:46
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Resolved"
+msgstr ""
+
+#: includes/Data/Tickets.php:47
+#: build/admin.js:7
+msgid "Closed"
+msgstr ""
+
+#: includes/Data/Tickets.php:66
+msgid "Low"
+msgstr ""
+
+#: includes/Data/Tickets.php:67
+msgid "Normal"
+msgstr ""
+
+#: includes/Data/Tickets.php:68
+msgid "High"
+msgstr ""
+
+#: includes/Data/Tickets.php:69
+msgid "Urgent"
+msgstr ""
+
+#: includes/Data/Tickets.php:81
+msgid "Portal"
+msgstr ""
+
+#: includes/Data/Tickets.php:82
+msgid "Form"
+msgstr ""
+
+#: includes/Data/Tickets.php:84
+msgid "Email (webhook)"
+msgstr ""
+
+#: includes/Data/Tickets.php:85
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Agent"
+msgstr ""
+
+#: includes/Data/Tickets.php:146
+msgid "The ticket could not be saved."
+msgstr ""
+
+#: includes/Frontend/Portal.php:148
+#: includes/Frontend/Strings.php:76
+msgid "Loading…"
+msgstr ""
+
+#: includes/Frontend/Portal.php:148
+msgid "Please enable JavaScript to contact support."
+msgstr ""
+
+#: includes/Frontend/Portal.php:187
+#: includes/Frontend/Strings.php:35
+#: build/blocks.js:1
+msgid "How can we help?"
+msgstr ""
+
+#: includes/Frontend/Portal.php:193
+msgid "Search help articles"
+msgstr ""
+
+#: includes/Frontend/Portal.php:194
+msgid "Search for answers…"
+msgstr ""
+
+#: includes/Frontend/Portal.php:195
+#: build/admin.js:11
+msgid "Search"
+msgstr ""
+
+#: includes/Frontend/Portal.php:212
+msgid "Browse topics"
+msgstr ""
+
+#. translators: %d: number of articles.
+#: includes/Frontend/Portal.php:237
+#, php-format
+msgid "View %d article"
+msgid_plural "View all %d articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Frontend/Portal.php:263
+msgid "Popular articles"
+msgstr ""
+
+#: includes/Frontend/Portal.php:270
+msgid "Help articles will appear here soon."
+msgstr ""
+
+#: includes/Frontend/Portal.php:274
+msgid "Still need help?"
+msgstr ""
+
+#: includes/Frontend/Portal.php:274
+msgid "Our team usually replies within a business day."
+msgstr ""
+
+#: includes/Frontend/Portal.php:274
+#: includes/Frontend/Strings.php:26
+msgid "Contact support"
+msgstr ""
+
+#. translators: %s: search query.
+#: includes/Frontend/Portal.php:289
+#, php-format
+msgid "No articles match \"%s\". Try other words or contact us."
+msgstr ""
+
+#: includes/Frontend/Portal.php:323
+#: build/admin.js:13
+#: build/blocks.js:1
+msgid "Support portal"
+msgstr ""
+
+#: includes/Frontend/Portal.php:324
+#: build/blocks.js:1
+msgid "Lets customers open tickets, see their tickets and reply."
+msgstr ""
+
+#: includes/Frontend/Portal.php:329
+#: build/blocks.js:1
+msgid "Ticket form"
+msgstr ""
+
+#: includes/Frontend/Portal.php:330
+#: build/blocks.js:1
+msgid "A contact form that opens a support ticket."
+msgstr ""
+
+#: includes/Frontend/Portal.php:335
+#: includes/Frontend/Portal.php:418
+#: build/admin.js:13
+#: build/blocks.js:1
+msgid "Help centre"
+msgstr ""
+
+#: includes/Frontend/Portal.php:336
+#: build/blocks.js:1
+msgid "Searchable knowledge base with topics and popular articles."
+msgstr ""
+
+#: includes/Frontend/Portal.php:417
+#: includes/Frontend/Portal.php:465
+#: includes/Frontend/Portal.php:470
+#: includes/Frontend/Portal.php:488
+msgid "Support"
+msgstr ""
+
+#: includes/Frontend/Strings.php:24
+#: build/admin.js:7
+#: build/admin.js:11
+msgid "New ticket"
+msgstr ""
+
+#: includes/Frontend/Strings.php:25
+msgid "My tickets"
+msgstr ""
+
+#: includes/Frontend/Strings.php:27
+msgid "Tell us what is going on and we will get back to you by email."
+msgstr ""
+
+#: includes/Frontend/Strings.php:28
+msgid "Your name"
+msgstr ""
+
+#: includes/Frontend/Strings.php:29
+msgid "Email address"
+msgstr ""
+
+#: includes/Frontend/Strings.php:31
+msgid "Topic"
+msgstr ""
+
+#: includes/Frontend/Strings.php:32
+msgid "Choose a topic"
+msgstr ""
+
+#: includes/Frontend/Strings.php:33
+#: build/admin.js:9
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Priority"
+msgstr ""
+
+#: includes/Frontend/Strings.php:34
+msgid "Order number (optional)"
+msgstr ""
+
+#: includes/Frontend/Strings.php:36
+msgid "Include any steps, error messages or links that help us understand."
+msgstr ""
+
+#: includes/Frontend/Strings.php:37
+msgid "Attach files"
+msgstr ""
+
+#. translators: 1: max files, 2: max MB.
+#: includes/Frontend/Strings.php:39
+#, php-format
+msgid "Up to %1$d files, %2$d MB each."
+msgstr ""
+
+#: includes/Frontend/Strings.php:40
+msgid "Remove"
+msgstr ""
+
+#: includes/Frontend/Strings.php:41
+msgid "Send request"
+msgstr ""
+
+#: includes/Frontend/Strings.php:42
+msgid "Sending…"
+msgstr ""
+
+#: includes/Frontend/Strings.php:43
+msgid "Please fill in this field."
+msgstr ""
+
+#: includes/Frontend/Strings.php:44
+#: includes/Helpdesk/Service.php:50
+#: includes/Rest/Public_Controller.php:267
+msgid "Enter a valid email address."
+msgstr ""
+
+#: includes/Frontend/Strings.php:45
+msgid "These articles might answer your question"
+msgstr ""
+
+#. translators: %s: ticket number.
+#: includes/Frontend/Strings.php:47
+#, php-format
+msgid "Ticket #%s is open"
+msgstr ""
+
+#: includes/Frontend/Strings.php:48
+msgid "Thanks! We emailed you a confirmation with a private link to this ticket. We will reply as soon as we can."
+msgstr ""
+
+#: includes/Frontend/Strings.php:49
+msgid "View ticket"
+msgstr ""
+
+#: includes/Frontend/Strings.php:50
+msgid "Open another ticket"
+msgstr ""
+
+#: includes/Frontend/Strings.php:51
+msgid "Already contacted us?"
+msgstr ""
+
+#: includes/Frontend/Strings.php:52
+msgid "Enter your email and we will send you the links to your tickets."
+msgstr ""
+
+#: includes/Frontend/Strings.php:53
+msgid "Email my links"
+msgstr ""
+
+#: includes/Frontend/Strings.php:54
+msgid "If we have tickets for that address, the links are on their way."
+msgstr ""
+
+#: includes/Frontend/Strings.php:55
+msgid "Log in"
+msgstr ""
+
+#: includes/Frontend/Strings.php:56
+#: includes/Rest/Public_Controller.php:138
+msgid "Please log in to contact support."
+msgstr ""
+
+#: includes/Frontend/Strings.php:57
+msgid "Have an account? Log in to see all your tickets."
+msgstr ""
+
+#: includes/Frontend/Strings.php:58
+msgid "You have no tickets yet."
+msgstr ""
+
+#: includes/Frontend/Strings.php:59
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Updated"
+msgstr ""
+
+#: includes/Frontend/Strings.php:60
+msgid "Waiting for your reply"
+msgstr ""
+
+#: includes/Frontend/Strings.php:61
+msgid "Back"
+msgstr ""
+
+#: includes/Frontend/Strings.php:62
+msgid "You"
+msgstr ""
+
+#: includes/Frontend/Strings.php:63
+msgid "Your reply"
+msgstr ""
+
+#: includes/Frontend/Strings.php:64
+#: build/admin.js:13
+msgid "Send reply"
+msgstr ""
+
+#: includes/Frontend/Strings.php:65
+msgid "My issue is solved"
+msgstr ""
+
+#: includes/Frontend/Strings.php:66
+msgid "Mark this ticket as solved?"
+msgstr ""
+
+#: includes/Frontend/Strings.php:67
+msgid "This ticket is closed. Open a new ticket if you need more help."
+msgstr ""
+
+#: includes/Frontend/Strings.php:68
+msgid "This ticket is resolved. Reply below if you still need help."
+msgstr ""
+
+#: includes/Frontend/Strings.php:69
+#: includes/Mail/Mailer.php:396
+msgid "How did we do?"
+msgstr ""
+
+#: includes/Frontend/Strings.php:70
+msgid "Anything we could do better? (optional)"
+msgstr ""
+
+#: includes/Frontend/Strings.php:71
+msgid "Send rating"
+msgstr ""
+
+#: includes/Frontend/Strings.php:72
+msgid "Thanks for your feedback!"
+msgstr ""
+
+#: includes/Frontend/Strings.php:73
+msgid "Your rating"
+msgstr ""
+
+#: includes/Frontend/Strings.php:74
+#: includes/Rest/Public_Controller.php:121
+msgid "We could not find that ticket. Use the link from your email, or log in."
+msgstr ""
+
+#: includes/Frontend/Strings.php:75
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: includes/Frontend/Strings.php:77
+msgid "You added the maximum number of files."
+msgstr ""
+
+#: includes/Frontend/Strings.php:78
+msgid "This file is too large."
+msgstr ""
+
+#: includes/Frontend/Strings.php:79
+#: build/admin.js:13
+msgid "Attachments"
+msgstr ""
+
+#: includes/Frontend/Strings.php:80
+msgid "Search results"
+msgstr ""
+
+#: includes/Frontend/Strings.php:81
+msgid "No articles match. Try other words or contact us."
+msgstr ""
+
+#: includes/Frontend/Strings.php:82
+msgid "Searching…"
+msgstr ""
+
+#: includes/Frontend/Strings.php:83
+msgid "Thanks for letting us know!"
+msgstr ""
+
+#: includes/Frontend/Strings.php:84
+#: includes/Rest/Presenter.php:176
+msgid "Support team"
+msgstr ""
+
+#: includes/Frontend/Strings.php:85
+msgid "Browse the help centre"
+msgstr ""
+
+#: includes/Helpdesk/Files.php:123
+#: includes/Helpdesk/Files.php:127
+msgid "The file could not be uploaded."
+msgstr ""
+
+#. translators: %s: maximum size, e.g. "5 MB".
+#: includes/Helpdesk/Files.php:132
+#, php-format
+msgid "Files must be smaller than %s."
+msgstr ""
+
+#: includes/Helpdesk/Files.php:139
+msgid "This file type is not allowed."
+msgstr ""
+
+#: includes/Helpdesk/Files.php:142
+msgid "This image could not be read."
+msgstr ""
+
+#: includes/Helpdesk/Files.php:148
+#: includes/Helpdesk/Files.php:168
+msgid "The file could not be saved."
+msgstr ""
+
+#: includes/Helpdesk/Files.php:195
+msgid "Attachments are not accepted."
+msgstr ""
+
+#. translators: %d: number of files.
+#: includes/Helpdesk/Files.php:200
+#, php-format
+msgid "You can attach up to %d file."
+msgid_plural "You can attach up to %d files."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Helpdesk/Files.php:341
+msgid "This link has expired. Open the ticket again to get a new link."
+msgstr ""
+
+#: includes/Helpdesk/Reports.php:130
+#: includes/Helpdesk/Reports.php:221
+#: build/admin.js:13
+msgid "Uncategorised"
+msgstr ""
+
+#: includes/Helpdesk/Reports.php:210
+#: build/admin.js:7
+#: build/admin.js:9
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Unassigned"
+msgstr ""
+
+#: includes/Helpdesk/Service.php:53
+msgid "We could not accept this request."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:59
+#: build/admin.js:7
+msgid "Add a subject."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:62
+msgid "Describe how we can help."
+msgstr ""
+
+#. translators: %s: agent name.
+#: includes/Helpdesk/Service.php:141
+#, php-format
+msgid "Ticket opened by %s on behalf of the customer."
+msgstr ""
+
+#. translators: %s: channel, e.g. "Email".
+#: includes/Helpdesk/Service.php:144
+#, php-format
+msgid "Ticket received via %s."
+msgstr ""
+
+#. translators: %s: agent name.
+#: includes/Helpdesk/Service.php:149
+#, php-format
+msgid "Auto-assigned to %s."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:180
+msgid "This ticket is closed. Please open a new ticket."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:193
+#: build/admin.js:13
+msgid "Write a message first."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:273
+msgid "Unknown status."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:303
+msgid "the customer"
+msgstr ""
+
+#. translators: 1: old status, 2: new status.
+#: includes/Helpdesk/Service.php:309
+#, php-format
+msgid "Status changed from %1$s to %2$s."
+msgstr ""
+
+#. translators: 1: old status, 2: new status, 3: person.
+#: includes/Helpdesk/Service.php:311
+#, php-format
+msgid "Status changed from %1$s to %2$s by %3$s."
+msgstr ""
+
+#. translators: 1: old priority, 2: new priority.
+#: includes/Helpdesk/Service.php:351
+#, php-format
+msgid "Priority changed from %1$s to %2$s."
+msgstr ""
+
+#. translators: %s: department.
+#: includes/Helpdesk/Service.php:358
+#, php-format
+msgid "Moved to %s."
+msgstr ""
+
+#. translators: %s: category.
+#: includes/Helpdesk/Service.php:366
+#, php-format
+msgid "Category set to %s."
+msgstr ""
+
+#. translators: %s: category.
+#: includes/Helpdesk/Service.php:366
+msgid "none"
+msgstr ""
+
+#. translators: %s: agent name.
+#: includes/Helpdesk/Service.php:376
+#, php-format
+msgid "Assigned to %s."
+msgstr ""
+
+#. translators: %s: agent name.
+#: includes/Helpdesk/Service.php:376
+msgid "Unassigned."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:436
+msgid "You can rate a ticket once it is resolved."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:440
+msgid "Choose a rating."
+msgstr ""
+
+#. translators: %s: rating label.
+#: includes/Helpdesk/Service.php:452
+#, php-format
+msgid "Customer rated the support: %s."
+msgstr ""
+
+#: includes/Helpdesk/Service.php:470
+msgid "Not good"
+msgstr ""
+
+#: includes/Helpdesk/Service.php:471
+msgid "Okay"
+msgstr ""
+
+#: includes/Helpdesk/Service.php:472
+msgid "Great"
+msgstr ""
+
+#: includes/Kb/Indexer.php:140
+msgid "No embedding returned."
+msgstr ""
+
+#: includes/Kb/Kb.php:47
+#: includes/Kb/Kb.php:51
+#: includes/Kb/Kb.php:52
+#: build/admin.js:13
+msgid "Help articles"
+msgstr ""
+
+#: includes/Kb/Kb.php:48
+msgid "Help article"
+msgstr ""
+
+#: includes/Kb/Kb.php:49
+msgid "Add help article"
+msgstr ""
+
+#: includes/Kb/Kb.php:50
+msgid "Edit help article"
+msgstr ""
+
+#: includes/Kb/Kb.php:74
+msgid "Help category"
+msgstr ""
+
+#: includes/Kb/Kb.php:167
+msgid "Was this article helpful?"
+msgstr ""
+
+#: includes/Kb/Kb.php:168
+msgid "Yes"
+msgstr ""
+
+#: includes/Kb/Kb.php:169
+msgid "No"
+msgstr ""
+
+#: includes/Kb/Kb.php:172
+msgid "Related articles"
+msgstr ""
+
+#: includes/Kb/Kb.php:180
+msgid "Back to the help centre"
+msgstr ""
+
+#: includes/Kb/Kb.php:183
+msgid "Still need help? Contact us"
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:69
+#: includes/Rest/Manager_Controller.php:436
+msgid "Add the IMAP host and user name first."
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:77
+msgid "The server did not greet us as an IMAP server."
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:91
+msgid "The IMAP server refused the user name or password."
+msgstr ""
+
+#. translators: %s: folder name.
+#: includes/Mail/Imap_Client.php:96
+#, php-format
+msgid "The folder \"%s\" could not be opened."
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:169
+msgid "Lost the connection to the mail server."
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:176
+msgid "The mail server stopped responding."
+msgstr ""
+
+#: includes/Mail/Imap_Client.php:196
+msgid "The mail server sent too much data."
+msgstr ""
+
+#: includes/Mail/Imap_Socket.php:36
+msgid "The IMAP host is not valid."
+msgstr ""
+
+#. translators: %s: error text from the system.
+#: includes/Mail/Imap_Socket.php:54
+#, php-format
+msgid "Could not connect to the IMAP server: %s"
+msgstr ""
+
+#: includes/Mail/Imap_Socket.php:68
+msgid "STARTTLS failed."
+msgstr ""
+
+#: includes/Mail/Inbound.php:111
+msgid "(no subject)"
+msgstr ""
+
+#. translators: %s: comma-separated file names.
+#: includes/Mail/Inbound.php:258
+#, php-format
+msgid "Email attachments not accepted (type, size or count limit): %s"
+msgstr ""
+
+#. translators: %s: customer first name.
+#: includes/Mail/Mailer.php:256
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#. translators: %s: ticket number.
+#: includes/Mail/Mailer.php:258
+#, php-format
+msgid "Thanks for getting in touch. We received your request and opened ticket #%s. We will reply as soon as we can."
+msgstr ""
+
+#. translators: %s: subject.
+#: includes/Mail/Mailer.php:264
+#, php-format
+msgid "We received your request: %s"
+msgstr ""
+
+#: includes/Mail/Mailer.php:273
+msgid "View your ticket"
+msgstr ""
+
+#. translators: 1: customer name, 2: email.
+#: includes/Mail/Mailer.php:284
+#, php-format
+msgid "New ticket from %1$s (%2$s)."
+msgstr ""
+
+#. translators: %s: subject.
+#: includes/Mail/Mailer.php:290
+#, php-format
+msgid "New ticket: %s"
+msgstr ""
+
+#: includes/Mail/Mailer.php:297
+#: includes/Mail/Mailer.php:368
+#: includes/Mail/Mailer.php:445
+#: includes/Mail/Mailer.php:482
+msgid "Open ticket"
+msgstr ""
+
+#. translators: %d: number of files.
+#: includes/Mail/Mailer.php:325
+#, php-format
+msgid "%d attachment: open the ticket to download it."
+msgid_plural "%d attachments: open the ticket to download them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Mail/Mailer.php:340
+msgid "View the conversation"
+msgstr ""
+
+#. translators: %s: customer name.
+#: includes/Mail/Mailer.php:356
+#, php-format
+msgid "%s replied:"
+msgstr ""
+
+#. translators: %s: subject.
+#: includes/Mail/Mailer.php:361
+#, php-format
+msgid "Customer replied: %s"
+msgstr ""
+
+#. translators: %s: ticket number.
+#: includes/Mail/Mailer.php:393
+#, php-format
+msgid "We marked ticket #%s as resolved. If something is still not right, just reply and we will pick it up again."
+msgstr ""
+
+#. translators: %s: subject.
+#: includes/Mail/Mailer.php:405
+#, php-format
+msgid "Resolved: %s"
+msgstr ""
+
+#. translators: %s: subject.
+#: includes/Mail/Mailer.php:435
+#, php-format
+msgid "Assigned to you: %s"
+msgstr ""
+
+#. translators: %s: ticket number.
+#: includes/Mail/Mailer.php:438
+#, php-format
+msgid "Ticket #%s was assigned to you."
+msgstr ""
+
+#: includes/Mail/Mailer.php:468
+msgid "first response"
+msgstr ""
+
+#: includes/Mail/Mailer.php:468
+msgid "resolution"
+msgstr ""
+
+#. translators: 1: SLA target name, 2: subject.
+#: includes/Mail/Mailer.php:472
+#, php-format
+msgid "SLA breached (%1$s): %2$s"
+msgstr ""
+
+#. translators: 1: ticket number, 2: SLA target name.
+#: includes/Mail/Mailer.php:475
+#, php-format
+msgid "Ticket #%1$s missed its %2$s target."
+msgstr ""
+
+#: includes/Mail/Mailer.php:506
+msgid "Your support tickets"
+msgstr ""
+
+#: includes/Mail/Mailer.php:507
+msgid "Here are the links to your support tickets:"
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:78
+#: includes/Rest/Manager_Controller.php:84
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:98
+msgid "This ticket belongs to another department."
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:280
+#: includes/Rest/Agent_Controller.php:301
+msgid "Only helpdesk managers can delete tickets."
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:322
+msgid "Unknown bulk action."
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:380
+msgid "WooCommerce is not active."
+msgstr ""
+
+#: includes/Rest/Agent_Controller.php:470
+#: includes/Rest/Manager_Controller.php:174
+msgid "Saved reply not found."
+msgstr ""
+
+#: includes/Rest/Manager_Controller.php:210
+msgid "No user with that user name or email. Create the WordPress user first (Users → Add New)."
+msgstr ""
+
+#: includes/Rest/Manager_Controller.php:250
+msgid "User not found."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:81
+msgid "The inbound email webhook is turned off."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:84
+msgid "Invalid webhook secret."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:134
+msgid "Please take a moment and try again."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:145
+msgid "We could not find that order for your email address. Check the number or leave it empty."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:176
+msgid "Please log in to see your tickets."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:249
+msgid "Ratings are turned off."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:252
+msgid "Thanks, you already rated this ticket."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:307
+msgid "Article not found."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:322
+msgid "The email could not be read."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use a hex colour like #4f46e5."
+msgstr ""
+
+#: build/admin.js:1
+msgid "picker"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background job"
+msgstr ""
+
+#. translators: 1: processed, 2: total, 3: percent
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s processed (%3$s%%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Starting…"
+msgstr ""
+
+#. translators: %s: failed count
+#: build/admin.js:1
+#, js-format
+msgid "%s failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:7
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Retry failed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show failed items"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3HD_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3HD_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:13
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:13
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:13
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:13
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Positive"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Neutral"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Negative"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Angry"
+msgstr ""
+
+#: build/admin.js:1
+msgid "just now"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%d min ago"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%d h ago"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%d d ago"
+msgstr ""
+
+#. translators: %d: minutes.
+#: build/admin.js:3
+#, js-format
+msgid "%d min"
+msgstr ""
+
+#. translators: 1: hours, 2: minutes.
+#: build/admin.js:5
+#, js-format
+msgid "%1$d h %2$d min"
+msgstr ""
+
+#: build/admin.js:5
+#, js-format
+msgid "%d h"
+msgstr ""
+
+#. translators: 1: days, 2: hours.
+#: build/admin.js:7
+#, js-format
+msgid "%1$d d %2$d h"
+msgstr ""
+
+#: build/admin.js:7
+#, js-format
+msgid "%d d"
+msgstr ""
+
+#: build/admin.js:7
+msgid "SLA paused"
+msgstr ""
+
+#: build/admin.js:7
+#, js-format
+msgid "Overdue %s"
+msgstr ""
+
+#: build/admin.js:7
+#, js-format
+msgid "Due in %s"
+msgstr ""
+
+#: build/admin.js:7
+msgid "SLA missed"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Tickets created and resolved per day"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Support portal and help-centre pages are published"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Email piping (IMAP or webhook) is connected"
+msgstr ""
+
+#: build/admin.js:7
+msgid "At least one help article is published"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Your support agents are added"
+msgstr ""
+
+#: build/admin.js:7
+msgid "DEV3 AI is connected (Gemini API key)"
+msgstr ""
+
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Dashboard"
+msgstr ""
+
+#. translators: %s: agent name.
+#: build/admin.js:7
+#, js-format
+msgid "Welcome back, %s. Here is what needs your attention."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Open inbox"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Connect DEV3 AI"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Add API key"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Add a Google Gemini API key to triage new tickets, draft replies from your knowledge base and summarise long threads. Everything else works without it."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Open tickets"
+msgstr ""
+
+#. translators: %d: count.
+#: build/admin.js:7
+#, js-format
+msgid "%d new"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Overdue (SLA)"
+msgstr ""
+
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Avg. first response"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Customer satisfaction"
+msgstr ""
+
+#. translators: %d: ratings.
+#: build/admin.js:7
+#: build/admin.js:13
+#, js-format
+msgid "%d ratings"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Resolved this week"
+msgstr ""
+
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Created vs resolved"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Last 14 days"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Open tickets by category"
+msgstr ""
+
+#: build/admin.js:7
+msgid "No open tickets"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Inbox zero. Nice work."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Needs attention"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Urgent, high priority and overdue tickets"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Nothing urgent"
+msgstr ""
+
+#: build/admin.js:7
+msgid "No urgent or overdue tickets right now."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Setup checklist"
+msgstr ""
+
+#. translators: %d: steps left.
+#: build/admin.js:7
+#, js-format
+msgid "%d steps left"
+msgstr ""
+
+#: build/admin.js:7
+msgid "All set"
+msgstr ""
+
+#: build/admin.js:7
+msgid "(done)"
+msgstr ""
+
+#: build/admin.js:7
+msgid "(to do)"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Set up"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Mine"
+msgstr ""
+
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "Overdue"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Waiting"
+msgstr ""
+
+#: build/admin.js:7
+#: build/admin.js:13
+msgid "All"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Log a request from a phone call, chat or walk-in. The customer gets the usual confirmation email."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Enter the customer’s email."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Describe the request."
+msgstr ""
+
+#. translators: %d: ticket number.
+#: build/admin.js:9
+#, js-format
+msgid "Ticket #%d created."
+msgstr ""
+
+#: build/admin.js:9
+msgid "Create ticket"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Customer name"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Customer email"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Message"
+msgstr ""
+
+#: build/admin.js:9
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Category"
+msgstr ""
+
+#: build/admin.js:9
+#: build/admin.js:13
+msgid "None"
+msgstr ""
+
+#: build/admin.js:9
+#: build/admin.js:11
+msgid "Assign to"
+msgstr ""
+
+#. translators: %d: number of tickets.
+#: build/admin.js:11
+#, js-format
+msgid "%d tickets updated."
+msgstr ""
+
+#: build/admin.js:11
+msgid "Select"
+msgstr ""
+
+#. translators: %d: ticket number.
+#: build/admin.js:11
+#, js-format
+msgid "Select ticket #%d"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Customer replied last"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Triage ready"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Draft ready"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "SLA"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Tickets"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Every conversation from the portal, forms and email. Open one to reply, add notes or let DEV3 AI help."
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Export CSV"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Ticket views"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Search subject, #number, email or message"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Department"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "All departments"
+msgstr ""
+
+#: build/admin.js:11
+msgid "All categories"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Any priority"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Any agent"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Bulk actions"
+msgstr ""
+
+#. translators: %d: number selected.
+#: build/admin.js:11
+#, js-format
+msgid "%d selected"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Assign to…"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Set status"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Set status…"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Set priority"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Set priority…"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Delete"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Clear"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Select all on this page"
+msgstr ""
+
+#: build/admin.js:11
+msgid "No tickets here"
+msgstr ""
+
+#: build/admin.js:11
+msgid "New tickets from your support page, forms and email show up in this list."
+msgstr ""
+
+#: build/admin.js:11
+msgid "Publish the support portal (Settings → General) so customers can reach you."
+msgstr ""
+
+#: build/admin.js:11
+msgid "Delete these tickets?"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Tickets, their messages, notes and attachments are removed for good."
+msgstr ""
+
+#: build/admin.js:11
+msgid "Fix spelling & grammar"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Make it friendlier"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Make it more formal"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Make it shorter"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Add empathy"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Friendly"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Formal"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Concise"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Empathetic"
+msgstr ""
+
+#: build/admin.js:11
+#: build/admin.js:13
+msgid "Customer"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Internal note"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Sent by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:11
+msgid "via email"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Message type"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Reply to customer"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Only agents see internal notes. They are never emailed to the customer."
+msgstr ""
+
+#: build/admin.js:11
+msgid "Reply"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Write a note for your team…"
+msgstr ""
+
+#. translators: %s: customer name.
+#: build/admin.js:11
+#, js-format
+msgid "Write your reply to %s…"
+msgstr ""
+
+#. translators: %s: file name.
+#. translators: %s: name.
+#: build/admin.js:11
+#: build/admin.js:13
+#, js-format
+msgid "Remove %s"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Insert saved reply"
+msgstr ""
+
+#: build/admin.js:11
+msgid "Insert saved reply…"
+msgstr ""
+
+#. translators: %s: file name.
+#: build/admin.js:13
+#, js-format
+msgid "%s is too large."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Attach"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Draft tone"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Drafting…"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Draft with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Improve with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Improve with DEV3 AI…"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI prepared a draft for this ticket"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Review it, edit anything, then use it. Nothing is sent until you click Send."
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI reply draft"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Use this draft"
+msgstr ""
+
+#. translators: %d: percent.
+#: build/admin.js:13
+#, js-format
+msgid "Confidence %d%%"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Needs a human check"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Grounded in these help articles"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No help article matched this question, so the draft asks for details instead of guessing."
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI suggested edit"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Replace my text"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Then set status to"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Note added."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Reply sent."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Add note"
+msgstr ""
+
+#: build/admin.js:13
+msgid "WooCommerce orders"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No orders found"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No orders for this customer’s account or email."
+msgstr ""
+
+#: build/admin.js:13
+msgid "linked to this ticket"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI · Help article from this ticket"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Personal details are removed before the thread is sent. The article is saved as a draft for you to review."
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI article draft"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Title"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Summary"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Article (HTML)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Draft article created"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Review and publish it in the editor."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Open editor"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Save as draft article"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Ticket updated."
+msgstr ""
+
+#: build/admin.js:13
+msgid "All tickets"
+msgstr ""
+
+#. translators: 1: number, 2: channel.
+#: build/admin.js:13
+#, js-format
+msgid "Ticket #%1$d · via %2$s"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Resolve"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Create help article with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI thread summary"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Refresh"
+msgstr ""
+
+#: build/admin.js:13
+msgid "New messages arrived since this summary."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer wants"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Done so far"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Open questions"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Next step"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Conversation"
+msgstr ""
+
+#. translators: %d: messages.
+#: build/admin.js:13
+#, js-format
+msgid "%d messages"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Summarise with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "This ticket is closed. Replying reopens it for the customer."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Properties"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Assignee"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Tags"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Comma separated. Saved when you leave the field."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Assign to me"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI triage"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Run triage again"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Suggest a category, priority and sentiment for this ticket."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Connect DEV3 AI in API Config to triage tickets automatically."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Triaging…"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Triage with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Sentiment"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Language"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Confidence"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Applied to this ticket."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Apply triage"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Registered customer"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Guest"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer link copied."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Copy customer link"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Other tickets"
+msgstr ""
+
+#: build/admin.js:13
+msgid "First response"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Met"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Missed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Resolution"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Paused (waiting on customer)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer rating"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Article"
+msgstr ""
+
+#: build/admin.js:13
+msgid "(no title)"
+msgstr ""
+
+#. translators: %d: ticket id.
+#: build/admin.js:13
+#, js-format
+msgid "from ticket %d"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Published"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Views"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Helpful"
+msgstr ""
+
+#: build/admin.js:13
+msgid "AI search"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Indexed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Not indexed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Knowledge base"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Help articles power the public help centre, the ticket-form suggestions and DEV3 AI reply drafts."
+msgstr ""
+
+#: build/admin.js:13
+msgid "View help centre"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Categories"
+msgstr ""
+
+#: build/admin.js:13
+msgid "New article"
+msgstr ""
+
+#: build/admin.js:13
+msgid "AI search index"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Embeddings let customers and DEV3 AI find articles by meaning, not just keywords. Articles re-index when you save them."
+msgstr ""
+
+#: build/admin.js:13
+msgid "The search index is up to date."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Rebuild index"
+msgstr ""
+
+#. translators: 1: indexed, 2: total.
+#: build/admin.js:13
+#, js-format
+msgid "%1$d of %2$d published articles indexed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Connect DEV3 AI in API Config to enable semantic search. Keyword search always works."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Indexing articles"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI article gaps"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Finds questions customers keep asking that no article answers yet, from your recently solved tickets."
+msgstr ""
+
+#. translators: %d: tickets.
+#: build/admin.js:13
+#, js-format
+msgid "%d tickets"
+msgstr ""
+
+#. translators: %s: title.
+#: build/admin.js:13
+#, js-format
+msgid "Suggested article: %s"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No gaps found: your articles cover the recent questions."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Analysing tickets…"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Run again with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Find gaps with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Open an example ticket and use “Create help article with DEV3 AI” to draft the missing article."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Articles"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No help articles yet"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Write your first article, or turn a solved ticket into one with DEV3 AI."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Saved replies"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Answers your team sends often. Agents insert them from the reply box; placeholders fill in for each ticket."
+msgstr ""
+
+#: build/admin.js:13
+msgid "New saved reply"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Used"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No saved replies yet"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Save the answers you type every day: shipping times, password resets, refund policy."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Edit saved reply"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Saved reply stored."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Reply text"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Placeholders:"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Delete this saved reply?"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Last 12 months"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Reports"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Volume, response times, SLA compliance and customer satisfaction."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Tickets created"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Avg. resolution time"
+msgstr ""
+
+#: build/admin.js:13
+msgid "SLA compliance"
+msgstr ""
+
+#: build/admin.js:13
+msgid "First responses on time"
+msgstr ""
+
+#: build/admin.js:13
+msgid "CSAT"
+msgstr ""
+
+#: build/admin.js:13
+msgid "By agent"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Tickets by agent"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No tickets in this period"
+msgstr ""
+
+#: build/admin.js:13
+msgid "By category"
+msgstr ""
+
+#. translators: %d: resolved.
+#: build/admin.js:13
+#, js-format
+msgid "%d resolved"
+msgstr ""
+
+#: build/admin.js:13
+msgid "By channel"
+msgstr ""
+
+#: build/admin.js:13
+msgid "By priority"
+msgstr ""
+
+#: build/admin.js:13
+msgid "General"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Departments"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Agents"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Emails"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Email piping"
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Mon"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Tue"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Wed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Thu"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Fri"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Sat"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Sun"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer: ticket received (with private link)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer: new reply from your team"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer: ticket resolved + rating request"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Team: new ticket"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Team: customer replied"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Agent: ticket assigned to you"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Team: SLA target missed"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Unsaved changes"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Add an agent"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Agents get the “Helpdesk agent” role: they can answer tickets of their departments (and unassigned ones) but cannot change settings. Administrators are always helpdesk managers."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Agent added."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Add agent"
+msgstr ""
+
+#: build/admin.js:13
+msgid "WordPress user name or email"
+msgstr ""
+
+#: build/admin.js:13
+msgid "The user must exist already (Users → Add New)."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Team"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Role"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Manager"
+msgstr ""
+
+#: build/admin.js:13
+msgid "IMAP mailbox"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Checks a support mailbox for new mail every few minutes. New mail opens tickets; replies (matched by [#number] or email threading) land on the right ticket."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Poll this mailbox"
+msgstr ""
+
+#: build/admin.js:13
+msgid "IMAP host"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Port"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Security"
+msgstr ""
+
+#: build/admin.js:13
+msgid "None (not recommended)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "User name"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Password"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Stored encrypted. Leave empty to keep it. You can also define DEV3HD_IMAP_PASSWORD in wp-config.php."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Use an app password if your provider has them."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Folder"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Check every (minutes)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Messages per check"
+msgstr ""
+
+#. translators: %d: unread messages.
+#: build/admin.js:13
+#, js-format
+msgid "Connected. %d unread messages waiting."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Test connection"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Check mail now"
+msgstr ""
+
+#. translators: 1: time, 2: error.
+#: build/admin.js:13
+#, js-format
+msgid "Last check %1$s failed: %2$s"
+msgstr ""
+
+#. translators: 1: time, 2: fetched, 3: created, 4: replies.
+#: build/admin.js:13
+#, js-format
+msgid "Last check %1$s: %2$d fetched, %3$d new tickets, %4$d replies."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Checking mail"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Inbound webhook"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Forward mail from Mailgun routes, SendGrid Inbound Parse, Postmark or any service that POSTs JSON or raw MIME."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Accept inbound email at this URL"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Webhook URL (keep it secret)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Generic JSON fields: from, subject, text, html, message_id, in_reply_to, references, attachments[{filename, content (base64), content_type}]."
+msgstr ""
+
+#: build/admin.js:13
+msgid "New secret created. Update your mail service."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Regenerate secret"
+msgstr ""
+
+#. translators: %s: email.
+#: build/admin.js:13
+#, js-format
+msgid "Notifications are sent from %s. Use the address of the mailbox above so customer replies come back to the helpdesk."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Support pages"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Created on activation. Add the blocks or shortcodes [dev3hd_portal], [dev3hd_ticket_form] and [dev3hd_help_center] to any page."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Missing"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Pages created."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Create missing pages"
+msgstr ""
+
+#: build/admin.js:13
+msgid "First ticket number"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Numbers continue from the highest existing ticket."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Auto-close resolved tickets after (days)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "0 turns auto-close off."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Auto-assign new tickets"
+msgstr ""
+
+#: build/admin.js:13
+msgid "No, leave unassigned"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Round-robin within the department"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Guests can open tickets (no account needed)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Require login to contact support"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customers choose a priority"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Reopen resolved or closed tickets when the customer replies"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Agents see every ticket (not only their departments)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Ask for a satisfaction rating when a ticket is resolved"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Show the WooCommerce order panel and the order-number field"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Stored in a private folder and only served through signed, expiring links."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Allow attachments"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Files per message"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Max size per file (MB)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Portal and help centre"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Accent colour"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Help article URL base"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Articles live at /help/article/…; re-save Settings → Permalinks after changing it."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Text above the ticket form"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Blocked senders"
+msgstr ""
+
+#: build/admin.js:13
+msgid "One email or @domain per line. Their forms and emails are refused."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Data"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Delete all helpdesk data when the plugin is deleted"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Tickets, replies, attachments, help articles and settings."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Teams that own tickets. A department email receives new-ticket alerts (otherwise its agents do)."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Add department"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Notification email"
+msgstr ""
+
+#: build/admin.js:13
+msgid "department"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Topics customers pick on the form (and DEV3 AI triage chooses from). Each routes to a department."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Add category"
+msgstr ""
+
+#: build/admin.js:13
+msgid "category"
+msgstr ""
+
+#: build/admin.js:13
+msgid "SLA targets"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Hours until the first reply and until resolution, per priority. The clock pauses while a ticket waits on the customer. 0 = no target."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Track SLA targets"
+msgstr ""
+
+#: build/admin.js:13
+msgid "First response (hours)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Resolution (hours)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Business hours"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Count only working hours (site time zone) towards SLA targets."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Use business hours"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Working days"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Opens at (hour)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Closes at (hour)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Notifications"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customer emails carry the site name only (no plugin branding) and a [#number] tag so replies thread correctly."
+msgstr ""
+
+#: build/admin.js:13
+msgid "From name"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Site name"
+msgstr ""
+
+#: build/admin.js:13
+msgid "From email"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Defaults to the IMAP user, then the admin email."
+msgstr ""
+
+#: build/admin.js:13
+msgid "DEV3 AI automation"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Runs in the background for every new ticket. Results wait on the ticket for an agent unless you allow them to apply."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Triage new tickets (category, priority, sentiment)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Apply triage automatically"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Off: agents review and click “Apply triage”. On: category, priority and department are set right away and logged."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Prepare a reply draft from the knowledge base"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Summarise threads with at least this many messages"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Semantic search in the help centre and ticket form"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Uses embeddings (rate-limited, cached, keyword fallback). Respects the storefront AI switch in API Config."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Auto-send (off by default)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Lets DEV3 AI answer simple questions on its own. It only sends when the draft cites at least one help article, the confidence is above the threshold, it does not ask for a human, and no agent has replied yet."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Customers will receive AI-written replies without review. Check your help articles are accurate."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Send confident drafts automatically"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Minimum confidence (0.5–1)"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Name on automatic replies"
+msgstr ""
+
+#: build/admin.js:13
+msgid "How tickets arrive, who handles them, and what DEV3 AI may do."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Settings sections"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:13
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Connect Google Gemini, pick models and set a monthly AI budget."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Customers open tickets here; logged-in customers also see “My tickets”. Preview the page to see it."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "A contact form that opens a support ticket, with help-article suggestions while customers type."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Heading"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Search box, help topics and popular articles. Preview the page to see it."
+msgstr ""

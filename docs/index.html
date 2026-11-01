@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Helpdesk & Ticket Triage for WordPress · Documentation</title>
+<style>
+:root { --ink:#111827; --mut:#4b5563; --line:#e5e7eb; --brand:#4f46e5; --tint:#f5f6fb; }
+* { box-sizing: border-box; }
+body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; }
+header { background:linear-gradient(135deg,#4f46e5,#2563eb); color:#fff; padding:40px 20px; }
+header h1 { margin:0 0 6px; font-size:28px; } header p { margin:0; opacity:.9; }
+.wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+nav { position:sticky; top:0; background:#fff; border-bottom:1px solid var(--line); overflow-x:auto; white-space:nowrap; z-index:2; }
+nav a { display:inline-block; padding:12px 10px; color:var(--mut); text-decoration:none; font-weight:600; font-size:14px; }
+nav a:hover { color:var(--brand); }
+section { padding:28px 0; border-bottom:1px solid var(--line); }
+h2 { font-size:22px; margin:0 0 12px; } h3 { font-size:17px; margin:20px 0 8px; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; background:var(--tint); border-radius:6px; }
+code { padding:2px 6px; } pre { padding:14px; overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:14px; } th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.note { background:#eef2ff; border-left:4px solid var(--brand); padding:12px 16px; border-radius:6px; }
+img { max-width:100%; border:1px solid var(--line); border-radius:8px; }
+.shots { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>DEV3 AI Helpdesk & Ticket Triage for WordPress</h1><p>Version 1.0.0 · Support tickets, email piping, SLAs, a help centre and DEV3 AI triage.</p></div></header>
+<nav><div class="wrap"><a href="#install">Install</a><a href="#key">Gemini key</a><a href="#tickets">Tickets</a><a href="#portal">Portal &amp; forms</a><a href="#email">Email piping</a><a href="#team">Agents &amp; SLA</a><a href="#kb">Knowledge base</a><a href="#ai">DEV3 AI</a><a href="#woo">WooCommerce</a><a href="#privacy">Privacy</a><a href="#hooks">Hooks &amp; REST</a><a href="#faq">FAQ</a><a href="#changelog">Changelog</a></div></nav>
+<main class="wrap">
+
+<section id="install"><h2>Installation</h2>
+<ol>
+<li>WordPress 6.0+ and PHP 7.4+ (tested on PHP 8.3). WooCommerce 8+ is optional.</li>
+<li>Plugins → Add New → Upload Plugin → choose <code>dev3-ai-helpdesk.zip</code> → Activate.</li>
+<li>On activation the plugin creates a <strong>Support</strong> page (support portal block) and a <strong>Help centre</strong> page, the <em>Helpdesk agent</em> role and its tables.</li>
+<li>Open <strong>DEV3 AI Helpdesk</strong> in the admin menu. The dashboard checklist shows what is left to set up.</li>
+</ol>
+<div class="shots"><img src="screenshots/1-dashboard.png" alt="Dashboard"><img src="screenshots/3-inbox.png" alt="Inbox"></div>
+</section>
+
+<section id="key"><h2>Google Gemini API key</h2>
+<ol>
+<li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and create a key.</li>
+<li>In <strong>DEV3 AI Helpdesk → API Config</strong>, paste the key and click Validate. It is stored encrypted (AES-256-GCM). You can also define <code>define( 'DEV3HD_GEMINI_API_KEY', '…' );</code> in <code>wp-config.php</code>.</li>
+<li>Pick models (defaults: gemini-2.5-flash, gemini-2.5-pro, gemini-embedding-001), set a monthly budget cap, and decide whether visitor-facing AI (semantic help-centre search) is allowed.</li>
+</ol>
+<p class="note">Without a key the helpdesk works fully; AI buttons are disabled and search uses keywords.</p>
+</section>
+
+<section id="tickets"><h2>Tickets</h2>
+<p>Each ticket has a number (from <em>First ticket number</em>), subject, customer, channel (portal, form, email, webhook, agent), status, priority, department, category, assignee and tags.</p>
+<table><tr><th>Status</th><th>Meaning</th></tr>
+<tr><td>New</td><td>No agent has replied yet.</td></tr><tr><td>Open</td><td>Being worked on.</td></tr><tr><td>Waiting on customer</td><td>Agent replied; SLA clock paused. A customer reply reopens it.</td></tr><tr><td>On hold</td><td>Parked (e.g. waiting for a supplier).</td></tr><tr><td>Resolved</td><td>Solved; customer gets the rating request. Auto-closes after N days.</td></tr><tr><td>Closed</td><td>Finished. Replies reopen it unless disabled.</td></tr></table>
+<h3>Inbox</h3><p>Views: Open, Mine, Unassigned, Overdue, Waiting, Resolved, Closed, All. Filter by department, category, priority and agent; search covers subjects, numbers (<code>#1001</code>), emails and message text. Select tickets to assign, change status or priority in bulk. Managers can export CSV and delete.</p>
+<h3>Ticket screen</h3><p>The thread shows customer messages, agent replies, <strong>internal notes</strong> (yellow, never emailed or shown to customers) and an activity log. Use <em>Reply to customer</em> or <em>Internal note</em>, insert saved replies, attach files and choose the status to set after sending (default: Waiting on customer). The side panel holds properties, DEV3 AI triage, customer details with their other tickets, SLA state, the rating and WooCommerce orders.</p>
+<h3>Saved replies</h3><p>Placeholders: <code>{{customer_first}}</code> <code>{{customer_name}}</code> <code>{{ticket_number}}</code> <code>{{subject}}</code> <code>{{agent_name}}</code> <code>{{portal_link}}</code> <code>{{site_name}}</code>. Limit a reply to one department if needed.</p>
+<img src="screenshots/2-ticket-ai-draft.png" alt="Ticket with DEV3 AI draft">
+</section>
+
+<section id="portal"><h2>Portal, forms and ratings</h2>
+<table><tr><th>Block</th><th>Shortcode</th><th>What it shows</th></tr>
+<tr><td>Support portal</td><td><code>[dev3hd_portal]</code></td><td>Ticket form + "Lost your link?" for guests; "My tickets" and New ticket tabs for logged-in customers; ticket view, replies, close and rating.</td></tr>
+<tr><td>Ticket form</td><td><code>[dev3hd_ticket_form]</code></td><td>Only the contact form (channel "Form").</td></tr>
+<tr><td>Help centre</td><td><code>[dev3hd_help_center title="…"]</code></td><td>Search, topics, popular articles, contact link.</td></tr></table>
+<p>While customers type a subject, matching help articles are suggested. Spam protection: hidden honeypot field, minimum fill time, per-IP limits, same-origin check and a block list (emails or <code>@domain</code>). Settings → General controls guest tickets, required login, customer-chosen priority, attachments (count, size) and the accent colour (or override <code>--dev3hd-accent</code> in your theme CSS).</p>
+<p>Customers get an email with a private link (<code>?ticket=1001&amp;key=…</code>). When a ticket is resolved they can rate it Great / Okay / Not good with a comment; links in the email preselect the rating.</p>
+<img src="screenshots/6-portal-mobile.png" alt="Portal on a phone" style="max-width:320px">
+</section>
+
+<section id="email"><h2>Email piping</h2>
+<h3>IMAP polling</h3><p>Settings → Email piping → IMAP mailbox: host, port, SSL/TLS or STARTTLS, user, password (stored encrypted, or <code>DEV3HD_IMAP_PASSWORD</code> in wp-config.php), folder, interval and messages per check. <em>Test connection</em> logs in and counts unread mail; <em>Check mail now</em> runs a background job with progress. Unread mail is fetched, turned into tickets or replies and marked as read. A built-in IMAP client is used, so the PHP imap extension is not required.</p>
+<p class="note">WP-Cron runs the 5-minute tick. On low-traffic sites add a real cron job: <code>*/5 * * * * wget -q -O - https://example.com/wp-cron.php</code>.</p>
+<h3>Inbound webhook</h3><p>Enable the webhook and copy the secret URL into your mail service:</p>
+<ul><li><strong>Mailgun</strong> → Receiving → Create route → <em>forward("URL")</em>.</li><li><strong>SendGrid</strong> → Inbound Parse → destination URL (normal or raw mode).</li><li><strong>Postmark</strong> → Inbound stream → webhook URL.</li><li><strong>Other</strong>: POST JSON <code>{from, subject, text, html, message_id, in_reply_to, references, attachments:[{filename, content (base64), content_type}]}</code> or a raw message in <code>raw</code>.</li></ul>
+<h3>Threading and safety</h3><p>Replies are matched by the <code>[#number]</code> subject tag or by <code>In-Reply-To</code>/<code>References</code>. Only the ticket's customer (or an agent) can reply into a ticket; anyone else opens a new ticket. Text above "##- Please type your reply above this line -##" and before quoted history is kept. Auto-replies (<code>Auto-Submitted</code>, <code>Precedence: bulk</code>), mailer daemons, your own address, duplicates and more than 10 new tickets per sender per hour are ignored. Agents can reply by email from their WordPress address.</p>
+</section>
+
+<section id="team"><h2>Agents, departments and SLA</h2>
+<p><strong>Agents</strong> (Settings → Agents) get the <em>Helpdesk agent</em> role: they see tickets of their departments, their own and (without departments) unassigned ones, unless "Agents see every ticket" is on. Administrators are managers and see everything plus settings, saved replies and reports.</p>
+<p><strong>Departments and categories</strong>: categories are the topics customers choose (and AI triage picks from); each routes to a department. Auto-assign can round-robin new tickets within the department.</p>
+<p><strong>SLA</strong>: first-response and resolution hours per priority, optional business hours (days + opening hours, site time zone). The clock pauses while waiting on the customer. An hourly check emails the assignee (or team) and the admin once per breach. <strong>Notifications</strong> are listed under Settings → Emails; customer emails carry your site name only.</p>
+</section>
+
+<section id="kb"><h2>Knowledge base</h2>
+<p>Write <strong>Help articles</strong> in the block editor (DEV3 AI Helpdesk → Help articles) and group them in <strong>Help categories</strong>. Articles live at <code>/help/article/slug/</code> (base configurable) and show "Was this helpful?" votes, related articles and links back to the help centre and portal. The Knowledge base screen lists views, helpful %, AI index state and DEV3 AI article gaps.</p>
+<img src="screenshots/5-help-centre.png" alt="Help centre">
+</section>
+
+<section id="ai"><h2>DEV3 AI features</h2>
+<table><tr><th>Feature</th><th>How it works</th><th>Review</th></tr>
+<tr><td>Triage</td><td>Category, priority, sentiment, language, summary and tags for each new ticket (background job) or on demand.</td><td>Draft card → "Apply triage". Opt-in auto-apply.</td></tr>
+<tr><td>Reply drafts</td><td>Finds the closest help articles with embeddings (keyword fallback), drafts a reply in the customer's language and cites the articles used.</td><td>Edit, then "Use this draft"; you click Send. Optional auto-send only with cited sources, confidence ≥ threshold and no human flag.</td></tr>
+<tr><td>Rewrite</td><td>Fix grammar, friendlier, formal, shorter, add empathy.</td><td>Diff view, accept to replace.</td></tr>
+<tr><td>Thread summary</td><td>Summary, goal, steps taken, open questions, next step. Automatic for long threads.</td><td>Read-only, refreshed when the thread changes.</td></tr>
+<tr><td>Article builder</td><td>Turns a solved ticket into a help article; personal data is masked before sending.</td><td>Edit fields, save as a draft post.</td></tr>
+<tr><td>Article gaps</td><td>Groups recent solved tickets into questions your help centre does not answer yet.</td><td>Read-only report with example tickets.</td></tr>
+<tr><td>Semantic search</td><td>Help centre and form suggestions find articles by meaning.</td><td>Rate-limited, cached, keyword fallback.</td></tr></table>
+<p>Customer text is passed as quoted data with instructions to ignore commands inside it. Every request is logged in Usage Logs with tokens and estimated cost; the monthly cap pauses AI when reached.</p>
+<img src="screenshots/4-knowledge-base.png" alt="Knowledge base">
+</section>
+
+<section id="woo"><h2>WooCommerce</h2>
+<p>With WooCommerce active, each ticket shows the customer's recent orders (by account or billing email) with status, total, items and an edit link; the order linked on the form is highlighted. The form's order number is accepted only when the order belongs to that email. Customers get a My Account → Support tab. Compatible with HPOS and the block cart/checkout.</p>
+</section>
+
+<section id="privacy"><h2>Privacy and data</h2>
+<p>Attachments are stored in <code>uploads/dev3hd-private/</code> with deny rules and random names, served only through signed links that expire. Tools → Export/Erase Personal Data includes support tickets (erasing anonymises tickets and messages and deletes attachments). A privacy-policy snippet names Google Gemini as processor. Turn on "Delete all helpdesk data" before deleting the plugin to remove tables, articles, files and settings.</p>
+</section>
+
+<section id="hooks"><h2>Hooks and REST API</h2>
+<table><tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+<tr><td><code>dev3hd_ticket_created( $ticket_id, $reply_id )</code></td><td>action</td><td>After a ticket is saved.</td></tr>
+<tr><td><code>dev3hd_reply_added( $ticket_id, $reply_id, $notify )</code></td><td>action</td><td>After a reply or note.</td></tr>
+<tr><td><code>dev3hd_status_changed( $ticket_id, $old, $new, $user_id )</code></td><td>action</td><td>Status change.</td></tr>
+<tr><td><code>dev3hd_ticket_assigned</code>, <code>dev3hd_ticket_rated</code>, <code>dev3hd_sla_breached</code></td><td>action</td><td>Assignment, rating, SLA breach.</td></tr>
+<tr><td><code>dev3hd_new_ticket( $row, $data )</code></td><td>filter</td><td>Change a ticket before insert.</td></tr>
+<tr><td><code>dev3hd_inbound_message( $msg, $channel )</code></td><td>filter</td><td>Inspect or drop inbound email (return null).</td></tr>
+<tr><td><code>dev3hd_statuses</code>, <code>dev3hd_priorities</code>, <code>dev3hd_portal_strings</code></td><td>filter</td><td>Labels and customer texts.</td></tr>
+<tr><td><code>dev3hd_email_html( $html, $args )</code></td><td>filter</td><td>Email template.</td></tr>
+<tr><td><code>dev3hd_auto_assign</code>, <code>dev3hd_ai_auto_send</code>, <code>dev3hd_attachment_mimes</code>, <code>dev3hd_inbound_hourly_limit</code>, <code>dev3hd_kb_min_score</code></td><td>filter</td><td>Routing, auto-send guard, file types, limits, search threshold.</td></tr>
+<tr><td><code>dev3hd_prompt_&lt;id&gt;</code> (triage, reply_draft, rewrite, summary, article, gaps)</td><td>filter</td><td>Override prompts.</td></tr></table>
+<p>REST namespace <code>dev3hd/v1</code>: agent routes (<code>tickets</code>, <code>tickets/&lt;id&gt;</code>, <code>tickets/&lt;id&gt;/replies</code>, <code>…/ai/triage|draft|summary</code>), manager routes (<code>canned</code>, <code>agents</code>, <code>reports</code>, <code>kb/*</code>, <code>mail/*</code>) with cookie + nonce auth, public routes (<code>portal/*</code>, <code>kb/search</code>, <code>kb/vote</code>) and <code>inbound/&lt;secret&gt;</code>.</p>
+</section>
+
+<section id="faq"><h2>FAQ</h2>
+<h3>Do customers see that AI is used?</h3><p>Customer-facing pages and emails carry no plugin branding. Auto-sent replies use the name you set (default "Support assistant").</p>
+<h3>My IMAP test fails.</h3><p>Check host/port/security, use an app password for Gmail/Outlook, and make sure your host allows outgoing connections to port 993.</p>
+<h3>Can I translate it?</h3><p>Yes: <code>languages/dev3-ai-helpdesk.pot</code> covers PHP and JavaScript strings.</p>
+</section>
+
+<section id="changelog"><h2>Changelog</h2><p><strong>1.0.0</strong> · Initial release.</p></section>
+</main>
+</body>
+</html>
